@@ -6,10 +6,16 @@ Implement a class `Date`. This class must meet the following requirements:
 - use a scoped enum for month
 - it has the following **public** functions:
 	- constructor that takes as arguments a day, a month and a year. (Forget about the validation for now)
+	
 	- `day()` function that returns the day
-	- `month()` function that returns the month
+	
+	- `month()` function that returns the month      //make an scoped noun month::march
+	
 	- `year()` function that returns the year
+	
 	- `add_days(const unsigned int n)` which adds `n` days. You have to take care to increment months and years accordingly (neglect leap years)
+	
+	  //hacer los miembros privados (como siempre)
 
 *Hints*:
 - you can add more functions, maybe private, to simplify the implementation of the above (e.g., you can implement a function that adds 1 single day)
@@ -41,6 +47,8 @@ lines of code) should be inlined. Bigger functions are recommended to
 be implemented outside the class. Remember that the name of the
 function is prefixed with the class name (see the implementation of
 `bar()` above).
+
+//see keyword: inline
 
 - In a switch-case statement you can use several `case` labels for a single case
 ```c++
@@ -83,6 +91,8 @@ Modify the class `Vector<typename T>` presented during the lecture exploiting al
 *Hints*:
 
 - remember to compile with `-std=c++14`
+
+  //auto functions
 
 
 

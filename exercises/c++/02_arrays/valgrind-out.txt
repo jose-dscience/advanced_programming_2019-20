@@ -1,0 +1,118 @@
+==8420== Memcheck, a memory error detector
+==8420== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==8420== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
+==8420== Command: ./reverse.exe
+==8420== Parent PID: 3776
+==8420== 
+--8420-- 
+--8420-- Valgrind options:
+--8420--    --leak-check=full
+--8420--    --show-leak-kinds=all
+--8420--    --track-origins=yes
+--8420--    --verbose
+--8420--    --log-file=valgrind-out.txt
+--8420-- Contents of /proc/version:
+--8420--   Linux version 4.18.0-24-generic (buildd@lgw01-amd64-048) (gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)) #25~18.04.1-Ubuntu SMP Thu Jun 20 11:13:08 UTC 2019
+--8420-- 
+--8420-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-bmi
+--8420-- Page sizes: currently 4096, max supported 4096
+--8420-- Valgrind library directory: /snap/valgrind/46/usr/lib/valgrind
+--8420-- Reading syms from /home/jose/Escritorio/Magistrale/Advanced_Programming/advanced_programming_2019-20/exercises/c++/02_arrays/reverse.exe
+--8420-- Reading syms from /lib/x86_64-linux-gnu/ld-2.29.so
+--8420--   Considering /lib/x86_64-linux-gnu/ld-2.29.so ..
+--8420--   .. CRC mismatch (computed c34345a7 wanted 87a50cbd)
+--8420--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.29.so ..
+--8420--   .. CRC is valid
+--8420-- Reading syms from /snap/valgrind/46/usr/lib/valgrind/memcheck-amd64-linux
+--8420--    object doesn't have a dynamic symbol table
+--8420-- Warning: inlined fn name without absori
+--8420-- is shown as UnknownInlinedFun
+--8420-- Scheduler: using generic scheduler lock implementation.
+--8420-- Reading suppressions file: /snap/valgrind/46/usr/lib/valgrind/default.supp
+==8420== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-8420-by-jose-on-???
+==8420== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-8420-by-jose-on-???
+==8420== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-8420-by-jose-on-???
+==8420== 
+==8420== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==8420== don't want to do, unless you know exactly what you're doing,
+==8420== or are doing some strange experiment):
+==8420==   /snap/valgrind/46/usr/lib/valgrind/../../bin/vgdb --pid=8420 ...command...
+==8420== 
+==8420== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==8420==   /path/to/gdb ./reverse.exe
+==8420== and then give GDB the following command
+==8420==   target remote | /snap/valgrind/46/usr/lib/valgrind/../../bin/vgdb --pid=8420
+==8420== --pid is optional if only one valgrind process is running
+==8420== 
+--8420-- REDIR: 0x4020900 (ld-linux-x86-64.so.2:strlen) redirected to 0x581b855e (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--8420-- REDIR: 0x40206e0 (ld-linux-x86-64.so.2:index) redirected to 0x581b8578 (vgPlain_amd64_linux_REDIR_FOR_index)
+--8420-- Reading syms from /snap/valgrind/46/usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--8420-- Reading syms from /snap/valgrind/46/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+==8420== WARNING: new redirection conflicts with existing -- ignoring it
+--8420--     old: 0x04020900 (strlen              ) R-> (0000.0) 0x581b855e vgPlain_amd64_linux_REDIR_FOR_strlen
+--8420--     new: 0x04020900 (strlen              ) R-> (2007.0) 0x04a38100 strlen
+--8420-- REDIR: 0x401d120 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4a391b0 (strcmp)
+--8420-- REDIR: 0x4020e40 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4a3caf0 (mempcpy)
+--8420-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.26
+--8420--    object doesn't have a symbol table
+--8420-- Reading syms from /lib/x86_64-linux-gnu/libc-2.29.so
+--8420--   Considering /lib/x86_64-linux-gnu/libc-2.29.so ..
+--8420--   .. CRC mismatch (computed 6bda65da wanted 2c1cad96)
+--8420--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.29.so ..
+--8420--   .. CRC is valid
+--8420-- Reading syms from /lib/x86_64-linux-gnu/libm-2.29.so
+--8420--   Considering /lib/x86_64-linux-gnu/libm-2.29.so ..
+--8420--   .. CRC mismatch (computed 20ae39ce wanted 54a9b04f)
+--8420--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libm-2.29.so ..
+--8420--   .. CRC is valid
+--8420-- Reading syms from /lib/x86_64-linux-gnu/libgcc_s.so.1
+--8420--    object doesn't have a symbol table
+--8420-- REDIR: 0x4edf240 (libc.so.6:memmove) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4ede3e0 (libc.so.6:strncpy) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4edf560 (libc.so.6:strcasecmp) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4eddd20 (libc.so.6:strcat) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4ede440 (libc.so.6:rindex) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4ee0d10 (libc.so.6:rawmemchr) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4efc330 (libc.so.6:wmemchr) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4efbd40 (libc.so.6:wcscmp) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4edf3a0 (libc.so.6:mempcpy) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4edf1d0 (libc.so.6:bcmp) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4ede380 (libc.so.6:strncmp) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4edddd0 (libc.so.6:strcmp) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4edf300 (libc.so.6:memset) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4efbd00 (libc.so.6:wcschr) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4ede2e0 (libc.so.6:strnlen) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4eddea0 (libc.so.6:strcspn) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4edf5b0 (libc.so.6:strncasecmp) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4edde40 (libc.so.6:strcpy) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4edf6f0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4efd650 (libc.so.6:wcsnlen) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4ede480 (libc.so.6:strpbrk) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4eddd80 (libc.so.6:index) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4ede2a0 (libc.so.6:strlen) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4ee8240 (libc.so.6:memrchr) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4edf600 (libc.so.6:strcasecmp_l) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4edf190 (libc.so.6:memchr) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4efbe30 (libc.so.6:wcslen) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4ede720 (libc.so.6:strspn) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4edf500 (libc.so.6:stpncpy) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4edf4a0 (libc.so.6:stpcpy) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4ee0d50 (libc.so.6:strchrnul) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4edf650 (libc.so.6:strncasecmp_l) redirected to 0x482d770 (_vgnU_ifunc_wrapper)
+--8420-- REDIR: 0x4ef0ec0 (libc.so.6:__strrchr_sse2) redirected to 0x4a37ae0 (__strrchr_sse2)
+--8420-- REDIR: 0x4ed9a40 (libc.so.6:malloc) redirected to 0x4a34e0f (malloc)
+--8420-- REDIR: 0x4ef11b0 (libc.so.6:__strlen_sse2) redirected to 0x4a38080 (__strlen_sse2)
+--8420-- REDIR: 0x4fcbed0 (libc.so.6:__memcmp_sse4_1) redirected to 0x4a3b2d0 (__memcmp_sse4_1)
+--8420-- REDIR: 0x4ee9a00 (libc.so.6:__strcmp_sse2_unaligned) redirected to 0x4a39070 (strcmp)
+--8420-- REDIR: 0x4d04a60 (libstdc++.so.6:operator new[](unsigned long)) redirected to 0x4a35ad4 (operator new[](unsigned long))
+--8420-- REDIR: 0x4efafd0 (libc.so.6:__mempcpy_sse2_unaligned) redirected to 0x4a3c730 (mempcpy)
+--8420-- REDIR: 0x4d02d90 (libstdc++.so.6:operator delete[](void*)) redirected to 0x4a36a2b (operator delete[](void*))
+--8420-- REDIR: 0x4eda1d0 (libc.so.6:free) redirected to 0x4a35f09 (free)
+==8420== 
+==8420== HEAP SUMMARY:
+==8420==     in use at exit: 0 bytes in 0 blocks
+==8420==   total heap usage: 4 allocs, 4 frees, 74,792 bytes allocated
+==8420== 
+==8420== All heap blocks were freed -- no leaks are possible
+==8420== 
+==8420== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
