@@ -1,0 +1,51 @@
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Advanced Programming Exam: Binary search tree}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Nicola Miolato \& José Santisteban}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{19 febbraio 2020}
+
+
+\begin{document}
+\maketitle
+
+\section{Binary search tree}\label{binary-search-tree}
+
+First of all the \emph{node} class has been implemented inside the
+\emph{bst} class, i.e.~the class representing the tree. The class tree is composed by some members like a two unique pointers which refers left and right possible children, one key and one value (some content). Aditionally there are two pointers, one which points to the father node and another that point to the root node of the tree. Thus even though
+\emph{node} is a struct, so each of its components are public, it is
+defined in the private part of the \emph{bst} class. \newline Some useful costructors and operators have been defined including copy and move semantics. For implement copy semantics have been designed an specific algorithm to through the tree (different from the one of the iterator). Requested methods in its different versions have been implemented, which are: \emph{Insert},
+\emph{Emplace}, \emph{Clear}, \emph{Begin}, \emph{End}, \emph{Find},
+\emph{Balance} and \emph{Erase}. And also two operators:
+\emph{Subscripting operator} and \emph{Put-to operator}. \newline Some
+One private function have been made to reduce the redundance on some
+primary functions, e.g.~the \emph{weak find} has been used inside the
+\emph{find} function and \emph{insert} function. \newline The other private function, developed with debugging purposes, \emph{strong print},
+allows to print the tree structure in the format
+\textless{}2\textbar{}3\textbar{}4\textgreater{}{[}5{]}\{6\}, where 3 is
+the node you are referring to, 2 is the left child and 4 the right
+child, 5 is the father and finally 6 is the root. \newline Another important component of \emph{bst} class is the iterator. It walk over the tree in a way in which, given an iterator pointing to certain key, when ++it is invoked, the iterator points to the node with the greater but closest node. \newline To implement \emph{Erease} has been a challenge as lots of conditions must be checked in order to re-append correctly the possible children of the deleted node to the rest of the tree, showing the importance of the contour conditions in non trivial containers with unusual metrics.
+
+
+\end{document}
